@@ -1,0 +1,5 @@
+TODO:
+  - will implement GUI
+  - will log info into a db
+  - will plot charts using db
+  - will start/stop mechanism to remote server.py
