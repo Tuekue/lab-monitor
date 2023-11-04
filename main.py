@@ -1,7 +1,7 @@
 import ujson
 from dataclasses import dataclass, field
 import socket
-import pprint
+import pprint   # for debugging json purpose. will be removed.
 import sys
 
 server_host  = '192.168.1.101'
@@ -62,13 +62,21 @@ def checkSocket(ipofserver):
 
 ips={'192.168.1.101', '10.1.1.14', '192.168.1.102', '10.1.1.254'}
 
+
+def main():
+    readJson()
+    for host in hosts:
+        print(host)
+        checkSocket(host)
+    pprint.pprint(hosts)
+
+
 if __name__ == '__main__':
-#    main()
+    main()
 #    readJson()
 #    for host in hosts:
 #        print(host)
-    for ipaddr in ips:
-        print(ipaddr)
-        checkSocket(ipaddr)
-#    print(ujson.dumps(hosts, indent=2))
-    pprint.pprint(hosts)
+#    for ipaddr in ips:
+#        print(ipaddr)
+#        checkSocket(ipaddr)
+#    pprint.pprint(hosts)
